@@ -1,5 +1,6 @@
 package main.java.wingspan.cards;
-import java.awt.iamge.BufferedImage;
+import java.awt.image.BufferedImage;
+import java.util.*;
 
 public class Card {
     private HashSet<String> habitats;
@@ -40,14 +41,7 @@ public class Card {
 
     public boolean hasHabitat(String s)
     {
-        if (habitats.contains(s))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return habitats.contains(s);
     }
 
     public String getName()
