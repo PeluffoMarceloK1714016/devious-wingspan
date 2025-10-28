@@ -51,7 +51,7 @@ public class Card {
 
     public int getPoints()
     {
-        return points;
+        return victoryPoints;
     }
 
     public BufferedImage getImage()
