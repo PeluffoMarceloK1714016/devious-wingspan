@@ -3,18 +3,18 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class Card {
-    private HashSet<String> habitats;
-    private String name;
+    private final HashSet<String> habitats;
+    private final String name;
     private int victoryPoints;
     private int maxEggs;
     private int currentEggs;
     private ArrayList<Card> tuckedCards;
     private ArrayList<String> foodTokens;
-    private BufferedImage cardImage;
+    private final BufferedImage cardImage;
 
     public Card(ArrayList<String> habitat, String name, int points, int maxEggs, BufferedImage image)
     {
-        this.habitats = new HashSet<String>();
+        this.habitats = new HashSet<>();
         for(String s: habitat)
         {
             this.habitats.add(s);
@@ -67,5 +67,30 @@ public class Card {
     public void addFoodtoken(String s)
     {
         foodTokens.add(s);
+    }
+
+    public int getVictoryPoints() 
+    {
+        return victoryPoints;
+    }
+
+    public void setVictoryPoints(int victoryPoints) 
+    {
+        this.victoryPoints = victoryPoints;
+    }
+
+    public void setMaxEggs(int maxEggs) 
+    {
+        this.maxEggs = maxEggs;
+    }
+
+    public ArrayList<Card> getTuckedCards() 
+    {
+        return tuckedCards;
+    }
+
+    public ArrayList<String> getFoodTokens() 
+    {
+        return foodTokens;
     }
 }
