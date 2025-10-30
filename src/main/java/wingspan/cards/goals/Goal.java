@@ -3,8 +3,8 @@ import java.awt.image.BufferedImage;
 
 public class Goal {
 
-    private BufferedImage goalImage; // what the player will be shown
-    private String goalString; // used to identify what the goal actually is
+    private final BufferedImage goalImage; // what the player will be shown
+    private final String goalString; // used to identify what the goal actually is
 
     public Goal(BufferedImage goalImage, String goalString) 
     {
