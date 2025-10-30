@@ -25,7 +25,7 @@ public class FoodDice {
             foodFaces.add(" file name ");
             foodFaces.add(" file name ");
 
-            rerolldice();
+            rerollDice();
             }
 
         public void rerollDice(){
