@@ -10,9 +10,7 @@ public class FoodDice {
         private ArrayList<String> foodChoices;
         private ArrayList<BufferedImage> foodFaces;
 
-        public FoodDice(BufferedImage a, String currentFood){
-            this.diceFace = a;
-            this.currentFood = currentFood;
+        public FoodDice(){
             foodChoices = new ArrayList<>();
             foodChoices.add("invertebrate");
             foodChoices.add("wheat");
@@ -26,6 +24,8 @@ public class FoodDice {
             foodFaces.add(" file name ");
             foodFaces.add(" file name ");
             foodFaces.add(" file name ");
+
+            rerolldice();
             }
 
         public void rerollDice(){
