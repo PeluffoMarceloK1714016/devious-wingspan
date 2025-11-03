@@ -42,6 +42,11 @@ public class Player {
 	{
 		return gameBoard;
 	}
+
+	public void addFood(String food, int amount)
+	{
+		foodInventory.put(food, foodInventory.get(food) + amount);
+	}
 	
 	public void decreaseActionsRemaining()
 	{
