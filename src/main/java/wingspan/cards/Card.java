@@ -1,6 +1,5 @@
 package main.java.wingspan.cards;
 import java.awt.image.BufferedImage;
-import java.util.*;
 
 public class Card {
     private BirdInfo birdInfo;

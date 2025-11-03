@@ -4,9 +4,10 @@ import java.util.HashMap;
 public class DataTable {
     HashMap<String, BirdInfo> table;
 
-    public DataTable
+    public DataTable()
     {
         table = new HashMap<>();
+        enterBirdInfo();
     }
 
     private void enterBirdInfo()

@@ -1,5 +1,7 @@
 package main.java.wingspan.cards;
 
+import java.util.*;
+
 public class BirdInfo {
     private final String name;
     private final HashSet<String> habitats;
@@ -46,11 +48,6 @@ public class BirdInfo {
     public int getPoints()
     {
         return victoryPoints;
-    }
-
-    public BufferedImage getImage()
-    {
-        return cardImage;
     }
 
     public void addTuckedCard(Card c)

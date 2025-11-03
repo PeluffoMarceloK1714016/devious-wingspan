@@ -1,5 +1,7 @@
 package main.java.wingspan.cards;
+
 import java.awt.image.BufferedImage;
+import main.java.wingspan.core.Player;
 
 public class BonusCard {
 	private BufferedImage cardImage;
@@ -16,6 +18,11 @@ public class BonusCard {
 		return cardImage;
 	}
 	
+	public int getVictoryPoints()
+	{
+		return victoryPoints;
+	}
+
 	public int calculateScore(Player p)
 	{
 		//placeholder; will be overridden in child BonusCard classes
