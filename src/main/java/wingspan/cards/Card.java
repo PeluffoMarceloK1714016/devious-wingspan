@@ -3,27 +3,13 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class Card {
-    private final HashSet<String> habitats;
-    private final String name;
-    private int victoryPoints;
-    private int maxEggs;
-    private int currentEggs;
-    private ArrayList<Card> tuckedCards;
-    private ArrayList<String> foodTokens;
+    private final BirdInfo birdInfo;
     private final BufferedImage cardImage;
 
-    public Card(ArrayList<String> habitat, String name, int points, int maxEggs, BufferedImage image)
+    public Card(BirdInfo birdInfo, BufferedImage cardImage)
     {
-        this.habitats = new HashSet<>();
-        for(String s: habitat)
-        {
-            this.habitats.add(s);
-        }
-        this.name = name;
-        this.victoryPoints = points;
-        this.maxEggs = maxEggs;
-        this.currentEggs = 0;
-        cardImage = image;
+        this.birdInfo = birdInfo;
+        this.cardImage = cardImage;
     }
 
     public boolean addEggs(int amount)
