@@ -3,8 +3,8 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class Card {
-    private final BirdInfo birdInfo;
-    private final BufferedImage cardImage;
+    private BirdInfo birdInfo;
+    private BufferedImage cardImage;
 
     public Card(BirdInfo birdInfo, BufferedImage cardImage)
     {
@@ -12,5 +12,16 @@ public class Card {
         this.cardImage = cardImage;
     }
 
-   
+    public BirdInfo getBirdInfo() { return birdInfo; }
+    public BufferedImage getCardImage() { return cardImage; }
+
+    public void setBirdInfo(BirdInfo newBirdInfo)
+    {
+        birdInfo = newBirdInfo;
+    }
+
+    public void setCardImage(BufferedImage newCardImage)
+    {
+        cardImage = newCardImage; // if we want to use templates instead of 170 separate card objs
+    }
 }
