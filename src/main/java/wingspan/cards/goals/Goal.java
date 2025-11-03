@@ -1,5 +1,6 @@
 package main.java.wingspan.cards.goals;
 import java.awt.image.BufferedImage;
+import main.java.wingspan.core.Player;
 
 public class Goal {
 
