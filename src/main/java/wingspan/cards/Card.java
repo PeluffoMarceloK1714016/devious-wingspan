@@ -1,34 +1,39 @@
 package wingspan.cards;
 import java.awt.image.BufferedImage;
-import java.util.*;
+import java.util.ArrayList;
 
 public class Card {
-    private final HashSet<String> habitats;
-    private final String name;
-    private int victoryPoints;
-    private int maxEggs;
+    private BirdInfo birdInfo;
+    private BufferedImage cardImage;
     private int currentEggs;
-    private ArrayList<Card> tuckedCards;
-    private ArrayList<String> foodTokens;
-    private final BufferedImage cardImage;
+    private final ArrayList<Card> tuckedCards;
+    private final ArrayList<String> foodTokens;
 
-    public Card(ArrayList<String> habitat, String name, int points, int maxEggs, BufferedImage image)
+    public Card(BirdInfo birdInfo, BufferedImage cardImage,int currentEggs, ArrayList<Card> tuckedCards, ArrayList<String> foodTokens)
     {
-        this.habitats = new HashSet<>();
-        for(String s: habitat)
-        {
-            this.habitats.add(s);
-        }
-        this.name = name;
-        this.victoryPoints = points;
-        this.maxEggs = maxEggs;
-        this.currentEggs = 0;
-        cardImage = image;
+        this.birdInfo = birdInfo;
+        this.cardImage = cardImage;
+        this.currentEggs = currentEggs;
+        this.tuckedCards = tuckedCards;
+        this.foodTokens = foodTokens;
+    }
+
+    public BirdInfo getBirdInfo() { return birdInfo; }
+    public BufferedImage getCardImage() { return cardImage; }
+
+    public void setBirdInfo(BirdInfo newBirdInfo)
+    {
+        birdInfo = newBirdInfo;
+    }
+
+    public void setCardImage(BufferedImage newCardImage)
+    {
+        cardImage = newCardImage; // if we want to use templates instead of 170 separate card objs
     }
 
     public boolean addEggs(int amount)
     {
-        if (currentEggs + amount <= maxEggs)
+        if (currentEggs + amount <= birdInfo.getMaxEggs())
         {
             currentEggs += amount;
             return true;
@@ -37,51 +42,6 @@ public class Card {
         {
             return false;
         }
-    }
-
-    public boolean hasHabitat(String s)
-    {
-        return habitats.contains(s);
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public int getPoints()
-    {
-        return victoryPoints;
-    }
-
-    public BufferedImage getImage()
-    {
-        return cardImage;
-    }
-
-    public void addTuckedCard(Card c)
-    {
-        tuckedCards.add(c);
-    }
-
-    public void addFoodtoken(String s)
-    {
-        foodTokens.add(s);
-    }
-
-    public int getVictoryPoints() 
-    {
-        return victoryPoints;
-    }
-
-    public void setVictoryPoints(int victoryPoints) 
-    {
-        this.victoryPoints = victoryPoints;
-    }
-
-    public void setMaxEggs(int maxEggs) 
-    {
-        this.maxEggs = maxEggs;
     }
 
     public ArrayList<Card> getTuckedCards() 
@@ -93,4 +53,5 @@ public class Card {
     {
         return foodTokens;
     }
+
 }
