@@ -18,12 +18,12 @@ public class FoodDice {
             foodChoices.add("berry");
             foodChoices.add("fish");
 
-            foodFaces = new ArrayList<>();
-            foodFaces.add(" file name ");  // corresponds to the indexes of the foodChoices
-            foodFaces.add(" file name ");
-            foodFaces.add(" file name ");
-            foodFaces.add(" file name ");
-            foodFaces.add(" file name ");
+            // foodFaces = new ArrayList<>();
+            // foodFaces.add(" file name ");  // corresponds to the indexes of the foodChoices
+            // foodFaces.add(" file name ");
+            // foodFaces.add(" file name ");
+            // foodFaces.add(" file name ");
+            // foodFaces.add(" file name ");
 
             rerollDice();
             }
