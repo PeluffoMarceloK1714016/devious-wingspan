@@ -1,6 +1,6 @@
-package main.java.wingspan.cards;
+package wingspan.cards;
 import java.awt.image.BufferedImage;
-import main.java.wingspan.core.Player;
+import wingspan.core.Player;
 
 public class BonusCard {
 	private BufferedImage cardImage;

@@ -1,4 +1,4 @@
-package main.java.wingspan.ui;
+package wingspan.ui;
 
 public class SetupPanel{
 

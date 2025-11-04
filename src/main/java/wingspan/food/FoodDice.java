@@ -1,4 +1,4 @@
-package main.java.wingspan.food;
+package wingspan.food;
 
 import java.awt.image.BufferedImage;
 import java.util.*;
