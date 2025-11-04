@@ -1,4 +1,4 @@
-package main.java.wingspan.core;
+package wingspan.core;
 import java.util.*;
 
 public class GoalBoard {
