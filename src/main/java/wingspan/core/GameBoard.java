@@ -1,4 +1,6 @@
 package wingspan.core;
+
+import wingspan.cards.Card;
 import java.util.*;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;

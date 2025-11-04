@@ -1,4 +1,6 @@
 package wingspan.core;
+
+import wingspan.cards.goals.Goal;
 import java.util.*;
 
 public class GoalBoard {

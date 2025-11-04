@@ -1,4 +1,6 @@
 package wingspan.core;
+
+import wingspan.cards.*;
 import java.util.*;
 import java.io.*;
 
