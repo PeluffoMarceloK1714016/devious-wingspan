@@ -23,7 +23,7 @@ public class SetupPanel extends JPanel implements KeyListener, MouseListener{
     	super.paint(g);
     }
     
-    addKeyListener(this);
+    //addKeyListener(this);
     public void keyPressed(KeyEvent e){}
     public void keyReleased(KeyEvent e){}
     public void keyTyped(KeyEvent e){}
