@@ -1,5 +1,6 @@
 package wingspan.cards;
 
+import wingspan.cards.behavior.*;
 import java.util.*;
 
 public class BirdInfo {

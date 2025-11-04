@@ -14,6 +14,7 @@ public class DrawCardBehavior implements PowerBehavior {
     public boolean executePower()
     {
         // logic to draw card and optionally tuck
+        return true;
     }
 
 }

@@ -22,7 +22,7 @@ public class DataTable {
 
 
         // BirdInfo bi = new BirdInfo("Acorn Woodpecker", habitats, 5, 4, 0, 46, behavior);
-        table.put("Acorn Woodpecker", bi);
+        //table.put("Acorn Woodpecker", bi);
     }
     
 }
