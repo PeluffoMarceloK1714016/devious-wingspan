@@ -5,35 +5,28 @@ import java.util.*;
 public class BirdInfo {
     private final String name;
     private final HashSet<String> habitats;
-    private int victoryPoints;
-    private int maxEggs;
-    private int currentEggs;
-    private ArrayList<Card> tuckedCards;
-    private ArrayList<String> foodTokens;
-    
-    //IMPORTANT
-    private PowerBehavior behavior;
+    private final int victoryPoints;
+    private final String[] foodCost;
+    private final String nestType;
+    private final int maxEggs;
+    private final int wingspan;
+    private final String powerColor;
+    private final PowerBehavior behavior;
 
-    public BirdInfo(String name, HashSet<String> habitats /* etc... */)
+    public BirdInfo(String name, HashSet<String> habitats, int victoryPoints, String[] foodCost, String nestType, int maxEggs, int wingspan, String powerColor, PowerBehavior behavior)
     {
         this.name = name;
         this.habitats = habitats;
-        // etc...
-        // behavior = new (Type)Behavior; which is determined when hard coding bird info
+        this.victoryPoints = victoryPoints;
+        this.foodCost = foodCost;
+        this.nestType = nestType;
+        this.maxEggs = maxEggs;
+        this.wingspan = wingspan;
+        this.powerColor = powerColor;
+        this.behavior = behavior;
     }
 
-     public boolean addEggs(int amount)
-    {
-        if (currentEggs + amount <= maxEggs)
-        {
-            currentEggs += amount;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+
 
     public boolean hasHabitat(String s)
     {
@@ -50,38 +43,38 @@ public class BirdInfo {
         return victoryPoints;
     }
 
-    public void addTuckedCard(Card c)
-    {
-        tuckedCards.add(c);
-    }
-
-    public void addFoodtoken(String s)
-    {
-        foodTokens.add(s);
-    }
-
     public int getVictoryPoints() 
     {
         return victoryPoints;
     }
 
-    public void setVictoryPoints(int victoryPoints) 
+    public String[] getFoodCost() 
     {
-        this.victoryPoints = victoryPoints;
+        return foodCost;
     }
 
-    public void setMaxEggs(int maxEggs) 
+    public String getNestType() 
     {
-        this.maxEggs = maxEggs;
+        return nestType;
     }
 
-    public ArrayList<Card> getTuckedCards() 
+    public int getMaxEggs() 
     {
-        return tuckedCards;
+        return maxEggs;
     }
 
-    public ArrayList<String> getFoodTokens() 
+    public int getWingspan() 
     {
-        return foodTokens;
+        return wingspan;
+    }
+
+    public String getPowerColor()
+    {
+        return powerColor;
+    }
+
+    public PowerBehavior getBehavior() 
+    {
+        return behavior;
     }
 }
