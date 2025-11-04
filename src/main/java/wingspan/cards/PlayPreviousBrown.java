@@ -1,4 +1,4 @@
-package main.java.wingspan.cards;
+package wingspan.cards;
 
 public class PlayPreviousBrown implements PowerBehavior {
     boolean playedBrownBefore = true; // sample
