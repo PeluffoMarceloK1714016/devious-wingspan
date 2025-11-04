@@ -1,4 +1,4 @@
-package main.java.wingspan.cards;
+package wingspan.cards;
 import java.awt.image.BufferedImage;
 import java.util.*;
 
