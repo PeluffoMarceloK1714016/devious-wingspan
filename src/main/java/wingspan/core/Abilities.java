@@ -1,4 +1,4 @@
-package main.java.wingspan.core;
+package wingspan.core;
 
 public class Abilities {
     
