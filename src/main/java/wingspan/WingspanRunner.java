@@ -1,4 +1,4 @@
-package main.java.wingspan;
+package wingspan;
 
 public class WingspanRunner {
     

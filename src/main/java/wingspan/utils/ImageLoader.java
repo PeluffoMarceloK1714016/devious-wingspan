@@ -1,4 +1,4 @@
-package main.java.wingspan.utils;
+package wingspan.utils;
 
 public class ImageLoader {
     
