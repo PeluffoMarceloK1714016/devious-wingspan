@@ -1,4 +1,4 @@
-package main.java.wingspan.food;
+package wingspan.food;
 import java.util.*;
 import java.io.*;
 
