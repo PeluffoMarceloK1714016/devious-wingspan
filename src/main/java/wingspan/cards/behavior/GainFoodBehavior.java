@@ -1,4 +1,4 @@
-package wingspan.cards;
+package wingspan.cards.behavior;
 
 public class GainFoodBehavior implements PowerBehavior {
     private final int numFood;
