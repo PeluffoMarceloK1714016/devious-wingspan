@@ -30,13 +30,13 @@ public class GameBoard {
 		{
 			if (grasslands.size() == 5)
 				return false;
-			forest.add(c);
+			grasslands.add(c);
 		}
 		else
 		{
 			if (wetlands.size() == 5)
 				return false;
-			forest.add(c);
+			wetlands.add(c);
 		}
 		return true;
 	}
