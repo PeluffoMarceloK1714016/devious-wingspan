@@ -1,4 +1,4 @@
-package main.java.wingspan.cards.birds;
+package wingspan.cards.birds;
 
 public class BirdCard {
     

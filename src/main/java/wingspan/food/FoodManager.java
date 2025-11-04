@@ -1,4 +1,4 @@
-package main.java.wingspan.food;
+package wingspan.food;
 
 public class FoodManager {
     
