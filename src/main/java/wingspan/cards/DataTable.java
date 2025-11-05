@@ -1,6 +1,5 @@
 package wingspan.cards;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class DataTable {
     HashMap<String, BirdInfo> table;
