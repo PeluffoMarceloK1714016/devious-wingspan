@@ -50,6 +50,6 @@ public class GainFoodBehavior implements PowerBehavior {
     }
 
     public boolean isFromFeeder() {
-        return fromFeeder;
+        return isFromFeeder;
     }
 }
