@@ -1,5 +1,5 @@
 package wingspan.cards.behavior;
 
-public class LayEggBehavior {
+public class LayEggBehavior (num Eggs){
     
 }
