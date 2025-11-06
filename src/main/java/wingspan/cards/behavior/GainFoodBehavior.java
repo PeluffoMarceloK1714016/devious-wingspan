@@ -1,8 +1,11 @@
 package wingspan.cards.behavior;
 
 public class GainFoodBehavior implements PowerBehavior {
-    private final int numFood;
-    private final String typeOfFood;
+    private int numFood;
+    private String typeOfFood;
+    private boolean isCacheable;
+    private boolean isFromFeeder;
+
 
     public GainFoodBehavior(int numFood, String typeOfFood)
     {
@@ -10,10 +13,25 @@ public class GainFoodBehavior implements PowerBehavior {
         this.typeOfFood = typeOfFood;
     }
 
+    public GainFoodBehavior(int numFood, String typeOfFood, boolean isCacheable) 
+    {
+        this.numFood = numFood;
+        this.typeOfFood = typeOfFood;
+        this.isCacheable = isCacheable;
+    }
+
+    public GainFoodBehavior(int numFood, String typeOfFood, boolean isCacheable, boolean isFromFeeder) 
+    {   
+        this.numFood = numFood;
+        this.typeOfFood = typeOfFood;
+        this.isCacheable = isCacheable;
+        this.isFromFeeder = isFromFeeder;
+    }
+
     @Override
     public boolean executePower()
     {
-        //gain food behaiovr
+        
         return true;
     }
 
@@ -25,5 +43,13 @@ public class GainFoodBehavior implements PowerBehavior {
     public String getTypeOfFood() 
     {
         return typeOfFood;
+    }
+
+    public boolean isCacheable() {
+        return isCacheable;
+    }
+
+    public boolean isFromFeeder() {
+        return fromFeeder;
     }
 }
