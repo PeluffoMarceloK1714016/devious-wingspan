@@ -3,6 +3,7 @@ package wingspan.cards.behavior;
 public class LayEggBehavior implements PowerBehavior {
     private int numEggs;
     private boolean onThisBird;
+    private String nestType;
 
     // Constructor 1: only number of eggs
     public LayEggBehavior(int numEggs) {
