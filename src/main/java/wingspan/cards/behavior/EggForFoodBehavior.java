@@ -1,10 +1,5 @@
 package wingspan.cards.behavior;
 
-public class EggForFoodBehavior {
-    
-}
-package wingspan.cards.behavior;
-
 public class EggForFoodBehavior implements PowerBehavior {
     private int numEggs;
     private int numFood;
