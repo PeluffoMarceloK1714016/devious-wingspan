@@ -18,4 +18,5 @@ public class GameState {
 	public static Player leastForest;
 
 	public static boolean activePlayerTuckedCard;
+	public static Card activeCard;
 }
