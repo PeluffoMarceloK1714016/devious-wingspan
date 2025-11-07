@@ -7,6 +7,7 @@ import java.io.*;
 public class Player {
 	private GameBoard gameBoard;
 	private ArrayList<Card> cards;
+	private Card cardToPlay;
 	private ArrayList<BonusCard> bonusCards;
 	private HashMap<String, Integer> foodInventory;
 	private int actionsRemaining;
@@ -38,6 +39,16 @@ public class Player {
 	public void addBonusCard(BonusCard c)
 	{
 		bonusCards.add(c);
+	}
+
+	public Card getCardToPlay()
+	{
+		return cardToPlay;
+	}
+
+	public void setCardToPlay(Card c)
+	{
+		cardToPlay = c;
 	}
 	
 	public GameBoard getGameBoard()

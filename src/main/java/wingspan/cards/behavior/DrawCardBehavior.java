@@ -17,4 +17,12 @@ public class DrawCardBehavior implements PowerBehavior {
         return true;
     }
 
+    public int getNumCards() {
+        return numCards;
+    }
+
+    public int getCardsToTuck() {
+        return cardsToTuck;
+    }
+
 }
