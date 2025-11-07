@@ -10,4 +10,12 @@ public class GameState {
 	public static CardManager cardManager;
 	public static ArrayList<Player> players;
 	public static GoalBoard goalBoard;
+	public static Player activePlayer;
+
+	//variables containing players with the least cards in the respective habitats - used for PowerBehavior logic
+	public static Player leastGrasslands;
+	public static Player leastWetlands;
+	public static Player leastForest;
+
+	public static boolean activePlayerTuckedCard;
 }
