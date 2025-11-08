@@ -1,5 +1,18 @@
 package wingspan;
+import javax.swing.*;
 
-public class WingspanFrame {
-    
+public class WingspanFrame extends JFrame{
+    private static final int WIDTH = 1000; //PLACEHOLDER, SUBJECT TO CHANGE
+    private static final int HEIGHT = 1000; //PLACEHOLDER, SUBJECT TO CHANGE
+
+    public WingspanFrame(String name){
+        super(name);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(WIDTH, HEIGHT);
+        setVisible(true);
+        setResizable(false);
+
+        //Display panels based on conditionals checking which state of the game is in. Ex: isSetup = true, display the SetupPanel
+    }
 }
+
