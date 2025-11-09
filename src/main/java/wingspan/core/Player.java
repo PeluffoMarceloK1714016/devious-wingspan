@@ -3,26 +3,28 @@ package wingspan.core;
 import wingspan.cards.*;
 import java.util.*;
 import java.io.*;
+import wingspan.food.Food;
 
 public class Player {
 	private GameBoard gameBoard;
 	private ArrayList<Card> cards;
 	private Card cardToPlay;
 	private ArrayList<BonusCard> bonusCards;
-	private HashMap<String, Integer> foodInventory;
+	private HashMap<Food, Integer> foodInventory;
 	private int actionsRemaining;
 	
 	public Player() throws IOException
 	{
 		gameBoard = new GameBoard();
-		cards = new ArrayList<Card>();
-		bonusCards = new ArrayList<BonusCard>();
-		foodInventory = new HashMap<String, Integer>();
-		foodInventory.put("invertebrate", 0);
-		foodInventory.put("berry", 0);
-		foodInventory.put("wheat", 0);
-		foodInventory.put("fish", 0);
-		foodInventory.put("rodent", 0);
+		cards = new ArrayList<>();
+		bonusCards = new ArrayList<>();
+		foodInventory = new HashMap<>();
+		
+		for (Food f : Food.values())
+		{
+			foodInventory.put(f, 0);
+		}
+		
 		resetActionsRemaining(1);
 	}
 	
@@ -56,11 +58,17 @@ public class Player {
 		return gameBoard;
 	}
 
-	public void addFood(String food, int amount)
+	public void addFood(Food food, int amount)
 	{
 		foodInventory.put(food, foodInventory.get(food) + amount);
 	}
 	
+	public int getActionsRemaining()
+	{
+		return actionsRemaining;
+	}
+
+
 	public void decreaseActionsRemaining()
 	{
 		actionsRemaining--;
@@ -86,7 +94,7 @@ public class Player {
 		}
 	}
 	
-	public HashMap<String, Integer> getFood()
+	public HashMap<Food, Integer> getFood()
 	{
 		return foodInventory;
 	}
