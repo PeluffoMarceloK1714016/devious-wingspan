@@ -1,3 +1,5 @@
+package wingspan.cards;
+
 import java.util.*;
 
 public class DataTable {
