@@ -2,7 +2,6 @@ package wingspan.cards;
 import wingspan.cards.behavior.*;
 import wingspan.enums.*;
 
-import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class BirdInfo {
