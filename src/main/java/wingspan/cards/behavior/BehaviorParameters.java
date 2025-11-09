@@ -1,12 +1,14 @@
 package wingspan.cards.behavior;
 
+import wingspan.enums.*;
+
 public class BehaviorParameters {
     public int numCards;
     public int cardsToTuck;
     public int numEggs;
     public int numFood;
     public boolean onThisBird;
-    public String typeOfFood;
+    public Food typeOfFood;
     public boolean isCacheable;
     public boolean isFromFeeder;
     public String nestType;

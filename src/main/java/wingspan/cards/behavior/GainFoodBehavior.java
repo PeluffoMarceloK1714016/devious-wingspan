@@ -1,31 +1,20 @@
 package wingspan.cards.behavior;
 
+import wingspan.enums.*;
+
 public class GainFoodBehavior implements PowerBehavior {
     private int numFood;
-    private String typeOfFood;
+    private Food typeOfFood;
     private boolean isCacheable;
     private boolean isFromFeeder;
 
 
-    public GainFoodBehavior(int numFood, String typeOfFood)
+    public GainFoodBehavior(BehaviorParameters params)
     {
-        this.numFood = numFood;
-        this.typeOfFood = typeOfFood;
-    }
-
-    public GainFoodBehavior(int numFood, String typeOfFood, boolean isCacheable) 
-    {
-        this.numFood = numFood;
-        this.typeOfFood = typeOfFood;
-        this.isCacheable = isCacheable;
-    }
-
-    public GainFoodBehavior(int numFood, String typeOfFood, boolean isCacheable, boolean isFromFeeder) 
-    {   
-        this.numFood = numFood;
-        this.typeOfFood = typeOfFood;
-        this.isCacheable = isCacheable;
-        this.isFromFeeder = isFromFeeder;
+        this.numFood = params.numFood;
+        this.typeOfFood = params.typeOfFood;
+        this.isCacheable = params.isCacheable;
+        this.isFromFeeder = params.isFromFeeder;
     }
 
     @Override
@@ -40,7 +29,7 @@ public class GainFoodBehavior implements PowerBehavior {
         return numFood;
     }
 
-    public String getTypeOfFood() 
+    public Food getTypeOfFood() 
     {
         return typeOfFood;
     }

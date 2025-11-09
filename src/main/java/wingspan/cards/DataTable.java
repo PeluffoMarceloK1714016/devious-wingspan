@@ -27,36 +27,6 @@ class BirdInfoJson {
     public String image;
 }
 
-class BehaviorFactory {
-    private static final Map<String, BehaviorCreator> registry = new HashMap<>();
-
-    static {
-        registry.put("tuckCard1", params -> new TuckCardBehavior((Integer) params[0]));
-        registry.put("tuckCard2", params -> new TuckCardBehavior((Integer) params[0], (Boolean) params[1]));
-        registry.put("tuckCard3", params -> new TuckCardBehavior(
-                (Integer) params[0],
-                (Boolean) params[1],
-                (PowerBehavior) params[2]
-        ));
-    }
-
-    public static PowerBehavior createBehavior(BehaviorParameters params) {
-        switch (params.type.toUpperCase()) {
-            case "TUCK_CARD":
-                return new TuckCardBehavior(params);
-            case "DRAW_CARD":
-                return new DrawCardBehavior(params);
-            case "GAIN_FOOD":
-                return new GainFoodBehavior(params);
-
-            // add all other behavior types here
-            default:
-                throw new IllegalArgumentException("Unknown behavior type: " + params.type);
-        }
-        
-    }
-}
-
 public class DataTable {
 
     private static Food[][] getFoodArray(BirdInfoJson bj) {
