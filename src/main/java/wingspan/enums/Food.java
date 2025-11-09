@@ -5,5 +5,6 @@ public enum Food {
     BERRY,
     WHEAT,
     FISH,
-    RODENT
+    RODENT,
+    ANY
 }
