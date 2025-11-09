@@ -4,14 +4,14 @@ public class EggForFoodBehavior implements PowerBehavior {
     private int numEggs;
     private int numFood;
     private boolean onThisBird;
-    private String typeOFFood;
+    private String typeOfFood;
 
     // Constructor 1
-    public EggForFoodBehavior(int numEggs, int numFood, boolean onThisBird, String typeOFFood) {
+    public EggForFoodBehavior(int numEggs, int numFood, boolean onThisBird, String typeOfFood) {
         this.numEggs = numEggs;
         this.numFood = numFood;
         this.onThisBird = onThisBird;
-        this.typeOFFood = typeOFFood;
+        this.typeOfFood = typeOfFood;
     }
 
     // Constructor 2 (no food type given)
@@ -19,7 +19,7 @@ public class EggForFoodBehavior implements PowerBehavior {
         this.numEggs = numEggs;
         this.numFood = numFood;
         this.onThisBird = onThisBird;
-        this.typeOFFood = "any";
+        this.typeOfFood = "any";
     }
 
     @Override
@@ -40,7 +40,7 @@ public class EggForFoodBehavior implements PowerBehavior {
         return onThisBird;
     }
 
-    public String getTypeOFFood() {
-        return typeOFFood;
+    public String getTypeOfFood() {
+        return typeOfFood;
     }
 }
