@@ -6,6 +6,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.*;
 import java.io.*;
+import java.util.*;
+import wingspan.cards.*;
 
 public class SetupPanel extends JPanel implements KeyListener, MouseListener{
 	int currentPlayer;
