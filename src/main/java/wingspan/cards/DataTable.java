@@ -8,7 +8,9 @@ import java.util.*;
 import javax.imageio.ImageIO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import wingspan.WingspanFrame;
+import wingspan.cards.behavior.*;
 import wingspan.enums.*;
+
 
 class BirdInfoJson {
     public String name;
@@ -22,6 +24,11 @@ class BirdInfoJson {
     public String behavior;
     public String image;
 }
+
+class BehaviorFactory {
+ 
+}
+
 
 public class DataTable {
     private static Food[][] getFoodArray(BirdInfoJson bj)
@@ -68,6 +75,8 @@ public class DataTable {
             InputStream imgStream = WingspanFrame.class.getResourceAsStream(imagePath);
             BufferedImage birdImage = ImageIO.read(imgStream);
 
+            PowerBehavior behavior;
+            
             BirdInfo birdInfo = new BirdInfo(
                 bj.name, habitats, foodArray, bj.victoryPoints,
                 nestType, bj.maxEggs, bj.wingSpan, color,
