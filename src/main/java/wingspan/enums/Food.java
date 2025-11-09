@@ -1,4 +1,4 @@
-package wingspan.food;
+package wingspan.enums;
 
 public enum Food {
     INVERTEBRATE,

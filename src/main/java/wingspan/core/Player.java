@@ -1,9 +1,10 @@
 package wingspan.core;
 
 import wingspan.cards.*;
+import wingspan.enums.Food;
+
 import java.util.*;
 import java.io.*;
-import wingspan.food.Food;
 
 public class Player {
 	private GameBoard gameBoard;
