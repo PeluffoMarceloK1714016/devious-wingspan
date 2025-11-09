@@ -2,6 +2,7 @@ package wingspan.cards;
 import wingspan.cards.behavior.*;
 import wingspan.enums.*;
 
+import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class BirdInfo {
@@ -14,9 +15,10 @@ public class BirdInfo {
     private final int wingSpan; // Wingspan in cm
     private final Color powerColor; // Power color: brown, pink, white, none
     private final PowerBehavior behavior;
+    private final BufferedImage image;
 
     public BirdInfo(String name, EnumSet<Habitat> habitats, Food[][] foodCost, int victoryPoints,
-                    NestType nestType, int maxEggs, int wingSpan, Color powerColor, PowerBehavior behavior) {
+                    NestType nestType, int maxEggs, int wingSpan, Color powerColor, PowerBehavior behavior, BufferedImage image) {
         this.name = name;
         this.habitats = habitats;
         this.foodCost = foodCost;
@@ -26,6 +28,7 @@ public class BirdInfo {
         this.wingSpan = wingSpan;
         this.powerColor = powerColor;
         this.behavior = behavior;
+        this.image = image;
     }
 
     public String getName() { return name; }
