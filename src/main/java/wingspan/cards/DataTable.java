@@ -16,14 +16,14 @@ interface BehaviorCreator {
 
 class BirdInfoJson {
     public String name;
-    public List<String> habitats;
-    public List<List<String>> food;
+    public List<Habitat> habitats;
+    public List<List<Food>> food;
     public int victoryPoints;
-    public String nestType;
+    public NestType nestType;
     public int maxEggs;
     public int wingSpan;
-    public String color;
-    public Map<String,Object> behaviorObject; // added for BehaviorFactory
+    public Color color;
+    public BehaviorParameters behavior; // <-- Jackson will auto-fill this!
     public String image;
 }
 
@@ -40,29 +40,20 @@ class BehaviorFactory {
         ));
     }
 
-    public static PowerBehavior getBehavior(Object json) {
-        if (json instanceof Map) {
-            @SuppressWarnings("unchecked")
-            Map<String, Object> obj = (Map<String, Object>) json;
-            String name = (String) obj.get("behavior");
-            List<Object> paramList = (List<Object>) obj.get("behaviorParams");
+    public static PowerBehavior createBehavior(BehaviorParameters params) {
+        switch (params.type.toUpperCase()) {
+            case "TUCK_CARD":
+                return new TuckCardBehavior(params);
+            case "DRAW_CARD":
+                return new DrawCardBehavior(params);
+            case "GAIN_FOOD":
+                return new GainFoodBehavior(params);
 
-            Object[] params = new Object[paramList.size()];
-            for (int i = 0; i < paramList.size(); i++) {
-                Object p = paramList.get(i);
-                if (p instanceof Map) {
-                    params[i] = getBehavior(p);
-                } else {
-                    params[i] = p;
-                }
-            }
-
-            BehaviorCreator creator = registry.get(name);
-            if (creator == null) throw new IllegalArgumentException("Unknown behavior: " + name);
-            return creator.create(params);
-        } else {
-            throw new IllegalArgumentException("Behavior JSON must be an object");
+            // add all other behavior types here
+            default:
+                throw new IllegalArgumentException("Unknown behavior type: " + params.type);
         }
+        
     }
 }
 
@@ -71,10 +62,10 @@ public class DataTable {
     private static Food[][] getFoodArray(BirdInfoJson bj) {
         Food[][] foodArray = new Food[bj.food.size()][];
         for (int r = 0; r < bj.food.size(); r++) {
-            List<String> row = bj.food.get(r);
+            List<Food> row = bj.food.get(r);
             foodArray[r] = new Food[row.size()];
             for (int c = 0; c < row.size(); c++) {
-                foodArray[r][c] = Food.valueOf(row.get(c).toUpperCase());
+                foodArray[r][c] = row.get(c);
             }
         }
         return foodArray;
@@ -94,14 +85,14 @@ public class DataTable {
             for (BirdInfoJson bj : birds) {
                 EnumSet<Habitat> habitats = getHabitatSet(bj);
                 Food[][] foodArray = getFoodArray(bj);
-                NestType nestType = NestType.valueOf(bj.nestType.toUpperCase());
-                Color color = Color.valueOf(bj.color.toUpperCase());
+                NestType nestType = bj.nestType;
+                Color color = bj.color;
 
                 String imagePath = "/Images/" + bj.image;
                 InputStream imgStream = WingspanFrame.class.getResourceAsStream(imagePath);
                 BufferedImage birdImage = ImageIO.read(imgStream);
 
-                PowerBehavior behavior = BehaviorFactory.getBehavior(bj.behaviorObject);
+                PowerBehavior behavior = BehaviorFactory.createBehavior(bj.behavior);
 
                 BirdInfo birdInfo = new BirdInfo(
                         bj.name, habitats, foodArray, bj.victoryPoints,

@@ -1,87 +1,20 @@
-[
-  {
-    "name": "Acorn Woodpecker",
-    "habitats": ["FOREST"],
-    "food": [["WHEAT"], ["WHEAT"], ["WHEAT"]],
-    "victoryPoints": 5,
-    "nestType": "CAVITY",
-    "maxEggs": 4,
-    "wingSpan": 46,
-    "color": "BROWN",
-    "behaviorObject": {
-      "behavior": "tuckCard3",
-      "behaviorParams": [
-        2,
-        true,
-        {
-          "behavior": "tuckCard1",
-          "behaviorParams": [1]
-        }
-      ]
-    },
-    "image": "acorn_woodpecker.png"
+{
+  "name": "Acorn Woodpecker",
+  "habitats": ["FOREST"],
+  "food": [["WHEAT"], ["WHEAT"], ["WHEAT"]],
+  "victoryPoints": 5,
+  "nestType": "CAVITY",
+  "maxEggs": 4,
+  "wingSpan": 46,
+  "color": "BROWN",
+  "behavior": {
+    "type": "TUCK_CARD",
+    "numCards": 2,
+    "fromHand": true,
+    "secondBehavior": {
+      "type": "GAIN_FOOD",
+      "foodAmount": 1
+    }
   },
-  {
-    "name": "American Avocet",
-    "habitats": ["WETLAND"],
-    "food": [["INVERTEBRATE"], ["INVERTEBRATE"], ["WHEAT"]],
-    "victoryPoints": 6,
-    "nestType": "GROUND",
-    "maxEggs": 2,
-    "wingSpan": 107,
-    "color": "PINK",
-    "behaviorObject": {
-      "behavior": "tuckCard2",
-      "behaviorParams": [
-        3,
-        false
-      ]
-    },
-    "image": "american_avocet.png"
-  },
-  {
-    "name": "American Bittern",
-    "habitats": ["WETLAND"],
-    "food": [["INVERTEBRATE"], ["FISH"], ["RODENT"]],
-    "victoryPoints": 7,
-    "nestType": "PLATFORM",
-    "maxEggs": 2,
-    "wingSpan": 107,
-    "color": "BROWN",
-    "behaviorObject": {
-      "behavior": "tuckCard1",
-      "behaviorParams": [1]
-    },
-    "image": "american_bittern.png"
-  },
-  {
-    "name": "American Coot",
-    "habitats": ["WETLAND"],
-    "food": [["WHEAT"], ["CHOICE"]],
-    "victoryPoints": 3,
-    "nestType": "PLATFORM",
-    "maxEggs": 5,
-    "wingSpan": 51,
-    "color": "BROWN",
-    "behaviorObject": {
-      "behavior": "tuckCard1",
-      "behaviorParams": [2]
-    },
-    "image": "american_coot.png"
-  },
-  {
-    "name": "American Crow",
-    "habitats": ["WETLAND", "FOREST", "GRASSLAND"],
-    "food": [["CHOICE"]],
-    "victoryPoints": 4,
-    "nestType": "PLATFORM",
-    "maxEggs": 2,
-    "wingSpan": 99,
-    "color": "BROWN",
-    "behaviorObject": {
-      "behavior": "tuckCard1",
-      "behaviorParams": [1]
-    },
-    "image": "american_crow.png"
-  }
-]
+  "image": "acorn_woodpecker.png"
+}
