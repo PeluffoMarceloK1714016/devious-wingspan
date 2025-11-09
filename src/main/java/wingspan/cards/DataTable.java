@@ -106,7 +106,7 @@ public class DataTable {
                 BirdInfo birdInfo = new BirdInfo(
                         bj.name, habitats, foodArray, bj.victoryPoints,
                         nestType, bj.maxEggs, bj.wingSpan, color,
-                        behavior, birdImage
+                        behavior
                 );
 
                 CardManager.birdCards.add(new Card(birdInfo, birdImage));

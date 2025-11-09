@@ -8,7 +8,17 @@
     "maxEggs": 4,
     "wingSpan": 46,
     "color": "BROWN",
-    "behavior": "someBehavior",
+    "behaviorObject": {
+      "behavior": "tuckCard3",
+      "behaviorParams": [
+        2,
+        true,
+        {
+          "behavior": "tuckCard1",
+          "behaviorParams": [1]
+        }
+      ]
+    },
     "image": "acorn_woodpecker.png"
   },
   {
@@ -20,7 +30,13 @@
     "maxEggs": 2,
     "wingSpan": 107,
     "color": "PINK",
-    "behavior": "someBehavior",
+    "behaviorObject": {
+      "behavior": "tuckCard2",
+      "behaviorParams": [
+        3,
+        false
+      ]
+    },
     "image": "american_avocet.png"
   },
   {
@@ -32,7 +48,10 @@
     "maxEggs": 2,
     "wingSpan": 107,
     "color": "BROWN",
-    "behavior": "someBehavior",
+    "behaviorObject": {
+      "behavior": "tuckCard1",
+      "behaviorParams": [1]
+    },
     "image": "american_bittern.png"
   },
   {
@@ -44,7 +63,10 @@
     "maxEggs": 5,
     "wingSpan": 51,
     "color": "BROWN",
-    "behavior": "someBehavior",
+    "behaviorObject": {
+      "behavior": "tuckCard1",
+      "behaviorParams": [2]
+    },
     "image": "american_coot.png"
   },
   {
@@ -56,7 +78,10 @@
     "maxEggs": 2,
     "wingSpan": 99,
     "color": "BROWN",
-    "behavior": "someBehavior",
+    "behaviorObject": {
+      "behavior": "tuckCard1",
+      "behaviorParams": [1]
+    },
     "image": "american_crow.png"
   }
 ]
